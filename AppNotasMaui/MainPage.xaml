@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="AppNotasMaui.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Notas Rápidas">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="20">
+
+            <!-- Título -->
+            <Label
+                Text="Notas Rápidas"
+                FontSize="28"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
+
+            <!-- Imagen decorativa -->
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="150"
+                HorizontalOptions="Center" />
+
+            <!-- Entry de entrada de texto -->
+            <Entry
+                x:Name="NotaEntry"
+                Placeholder="Escribe una nota aquí"
+                Keyboard="Text" />
+
+            <!-- Botón para agregar nota -->
+            <Button
+                Text="Agregar Nota"
+                Clicked="OnAgregarNotaClicked" />
+
+            <!-- Contenedor donde se mostrarán las notas -->
+            <VerticalStackLayout
+                x:Name="NotasContainer"
+                Spacing="10"
+                Padding="10">
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
